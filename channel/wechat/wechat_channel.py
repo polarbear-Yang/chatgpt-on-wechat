@@ -70,7 +70,7 @@ class WechatChannel(Channel):
                 content = content.split(img_match_prefix, 1)[1].strip()
                 thread_pool.submit(self._do_send_img, content, to_user_id)
             else:
-                thread_pool.submit(self._do_send, content, to_user_id)
+                thread_pool.submit(self._do_send, "我是"+msg['ActualNickName']+"。"+content, to_user_id)
 
 
     def handle_group(self, msg):
@@ -109,7 +109,7 @@ class WechatChannel(Channel):
                 return
             context = dict()
             context['from_user_id'] = reply_user_id
-            reply_text = super().build_reply_content(query, context)
+            reply_text = super().build_reply_content("I am "+ reply_user_id+". "+query, context)
             if reply_text:
                 self.send(conf().get("single_chat_reply_prefix") + reply_text, reply_user_id)
         except Exception as e:
@@ -142,8 +142,8 @@ class WechatChannel(Channel):
         if not query:
             return
         context = dict()
-        context['from_user_id'] = msg['ActualUserName']
-        reply_text = super().build_reply_content(query, context)
+        context['from_user_id'] = msg['User'].get('UserName', None)
+        reply_text = super().build_reply_content("我是"+msg['ActualNickName']+"。"+query, context)
         if reply_text:
             reply_text = '@' + msg['ActualNickName'] + ' ' + reply_text.strip()
             self.send(conf().get("group_chat_reply_prefix", "") + reply_text, msg['User']['UserName'])

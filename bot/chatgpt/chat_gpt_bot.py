@@ -18,12 +18,14 @@ class ChatGPTBot(Bot):
         if not context or not context.get('type') or context.get('type') == 'TEXT':
             logger.info("[OPEN_AI] query={}".format(query))
             from_user_id = context['from_user_id']
-            if query == '#清除记忆':
+            if query == '我是林下之风。清除记忆':
                 Session.clear_session(from_user_id)
                 return '记忆已清除'
+            if query == '我是林下之风。遗忘最近记忆':
+                Session.forget_session(from_user_id)
+                return '最近记忆已遗忘'
 
             new_query = Session.build_session_query(query, from_user_id)
-            logger.debug("[OPEN_AI] session query={}".format(new_query))
 
             # if context.get('stream'):
             #     # reply in stream
@@ -112,8 +114,15 @@ class Session(object):
             system_item = {'role': 'system', 'content': system_prompt}
             session.append(system_item)
             user_session[user_id] = session
-        user_item = {'role': 'user', 'content': query}
-        session.append(user_item)
+            logger.info("[OPEN_AI] session real lenth {}, query {}, session user id {}".format(len(session), query, user_id))
+        if "***" in query:
+            system_item = {'role': 'system', 'content': query}
+            session.append(system_item)
+            # logger.info("[OPEN_AI] session lenth {}, append item={}".format(len(session),system_item))
+        else:
+            user_item = {'role': 'user', 'content': query}
+            session.append(user_item)
+            # logger.info("[OPEN_AI] session lenth {}, append item={}".format(len(session),user_item))
         return session
 
     @staticmethod
@@ -127,4 +136,8 @@ class Session(object):
     @staticmethod
     def clear_session(user_id):
         user_session[user_id] = []
+
+    @staticmethod
+    def forget_session(user_id):
+        user_session[user_id] = user_session[user_id][:-5]
 
