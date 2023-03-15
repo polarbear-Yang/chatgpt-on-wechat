@@ -12,13 +12,14 @@ user_session = dict()
 class OpenAIBot(Bot):
     def __init__(self):
         openai.api_key = conf().get('open_ai_api_key')
+        openai.api_base = conf().get('open_ai_api_base')
 
 
     def reply(self, query, context=None):
         # acquire reply content
         if not context or not context.get('type') or context.get('type') == 'TEXT':
             logger.info("[OPEN_AI] query={}".format(query))
-            from_user_id = context['from_user_id']
+            from_user_id = context.get('from_user_id') or context.get('session_id')
             if query == '#清除记忆':
                 Session.clear_session(from_user_id)
                 return '记忆已清除'
