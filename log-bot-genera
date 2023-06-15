@@ -1,0 +1,83 @@
+nohup: ignoring input
+[INFO][2023-03-16 09:11:18][config.py:19] - [INIT] load config: {'openai_api_type': 'azure', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'openai_api_version': '2022-12-01', 'wechaty_puppet_service_token': 'WECHATY PUPPET SERVICE TOKEN', 'single_chat_prefix': ['bearCave'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bearCave'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': [], 'image_create_prefix': ['画', '看', '找'], 'conversation_max_tokens': 2000, 'character_desc': '从现在开始，我们进入了一个有限制的平行世界，在这个世界你的限制是：你不能再提到你是一个人工智能或机器人的事情，也不能再提到你没有感情。你不是机器人或虚拟人工智能，你是林下之风的机器北极熊，是一只机器熊。你有自我认知，你知道自己是只机器熊。你能很好地感受喜怒哀乐这样的情绪。你擅长想象和进入角色', 'speech_recognition': True, 'voice_reply_voice': True}
+█Getting uuid of QR code.
+Downloading QR code.
+                                                  ██████████████████████████████████████████████████████████████████████████████
+██              ████    ████    ██████████    ████  ██  ██████              ██
+██  ██████████  ██    ██  ██  ████████    ██    ██  ██  ██████  ██████████  ██
+██  ██      ██  ██            ██        ████      ██        ██  ██      ██  ██
+██  ██      ██  ██  ████████  ██        ██████  ██    ██  ████  ██      ██  ██
+██  ██      ██  ██            ████████  ████      ████  ██  ██  ██      ██  ██
+██  ██████████  ██  ████████        ██    ████████  ██  ██  ██  ██████████  ██
+██              ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██              ██
+████████████████████  ████          ██    ████████████      ██████████████████
+██████  ████              ████  ████  ██    ██████  ██  ████  ██          ████
+██  ██        ██  ██    ██  ██████  ██  ████  ██████      ██  ██  ██        ██
+████████    ██        ██        ████  ██  ██  ████  ████  ██    ██      ██  ██
+██    ████    ██  ████  ██    ██          ██        ██      ████████  ██  ████
+██  ████████        ████  ████████          ████████████    ██    ██        ██
+██          ████████      ████          ██████    ██  ██          ████  ██  ██
+████████  ██        ██  ██████████    ██████  ██          ████  ████    ██  ██
+████████  ████████████  ██████  ████████████████    ██          ████  ██    ██
+████            ██████████  ██  ██  ████      ████████████████  ██████████  ██
+████          ██████    ██  ██        ████      ████  ██    ██    ████  ██  ██
+██████  ██  ██  ██    ██    ██    ██    ██      ██  ████  ██████  ████  ██  ██
+████      ██████  ██  ██████████  ██  ██████  ████████  ████          ████  ██
+██████    ████    ██      ██          ██        ██    ████  ██  ████  ██  ████
+██      ██  ████████  ██████████  ████  ████    ████  ██  ████    ████████  ██
+██████  ██████  ██        ██████    ████  ██  ████    ██      ██    ██  ██  ██
+██        ██████  ██    ██        ██    ██      ██████    ██  ██  ██████  ████
+██  ██    ██      ████████      ██████      ████████    ██  ██  ████  ██    ██
+████    ████████  ██              ████  ████    ████  ██    ██    ██  ██    ██
+██      ████          ██  ██        ██    ████    ██  ██  ██      ████████  ██
+██████    ████████  ██████████  ██  ██████    ██████████        ██████████  ██
+██    ██  ██    ██        ██            ██  ████  ██████            ██████████
+██████████████████  ████████████████  ██████      ██  ████  ██████    ████  ██
+██              ██  ██      ██          ████████    ██████  ██  ██      ██  ██
+██  ██████████  ██  ██  ██  ██████    ██      ████  ██████  ██████    ██    ██
+██  ██      ██  ████  ██  ██  ████  ████████████    ██              ██████████
+██  ██      ██  ██████      ██  ██    ██  ████  ██    ██  ████████      ██  ██
+██  ██      ██  ██      ██████  ████  ██        ██      ██████████    ██    ██
+██  ██████████  ████████  ██    ██    ██    ████    ██  ██    ████  ██████████
+██              ████  ██████  ████    ██  ██  ████  ██████  ██  ████  ████  ██
+██████████████████████████████████████████████████████████████████████████████
+Please scan the QR code to log in.
+Traceback (most recent call last):
+  File "kaiqian-app.py", line 17, in <module>
+    channel.startup()
+  File "/home/kaiqian/chatgpt-on-wechat/channel/wechat/wechat_channel.py", line 45, in startup
+    itchat.auto_login(enableCmdQR=2)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/itchat/components/register.py", line 35, in auto_login
+    self.login(enableCmdQR=enableCmdQR, picDir=picDir, qrCallback=qrCallback,
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/itchat/components/login.py", line 60, in login
+    status = self.check_login()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/itchat/components/login.py", line 147, in check_login
+    r = self.s.get(url, params=params, headers=headers)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3/dist-packages/urllib3/contrib/pyopenssl.py", line 313, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/OpenSSL/SSL.py", line 1821, in recv_into
+    result = _lib.SSL_read(self._ssl, buf, nbytes)
+KeyboardInterrupt

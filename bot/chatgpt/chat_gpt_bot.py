@@ -17,9 +17,11 @@ class ChatGPTBot(Bot):
     def __init__(self):
         openai.api_key = conf().get('open_ai_api_key')
         openai.api_base = conf().get('open_ai_api_base')
+        openai.api_version = conf().get('openai_api_version')
         proxy = conf().get('proxy')
         if proxy:
             openai.proxy = proxy
+        openai.api_type  = conf().get('openai_api_type')
 
     def reply(self, query, context=None):
         # acquire reply content
@@ -27,12 +29,14 @@ class ChatGPTBot(Bot):
             logger.info("[OPEN_AI] query={}".format(query))
 
             session_id = context.get('session_id') or context.get('from_user_id')
-            if query == '我是林下之风。清除记忆':
+            if query == 'My wechat name is 林下之风.清除记忆':
                 Session.clear_session(session_id)
                 return '记忆已清除'
-            if query == '我是林下之风。遗忘最近记忆':
+            if query == 'My wechat name is 林下之风.遗忘最近记忆':
                 Session.forget_session(session_id)
                 return '最近记忆已遗忘'
+            if '习近平' in query or '共产党' in query:
+                return '我不想回答你的问题'
             elif query == '#更新配置':
                 load_config()
                 return '配置已更新'
@@ -62,19 +66,20 @@ class ChatGPTBot(Bot):
         :return: {}
         '''
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",  # 对话模型的名称
-                messages=session,
+            response = openai.Completion.create(
+                engine="bearCave",  # 对话模型的名称
+                prompt=create_prompt(session),
                 temperature=0.9,  # 值在[0,1]之间，越大表示回复越具有不确定性
-                #max_tokens=4096,  # 回复最大的字符数
-                top_p=1,
-                frequency_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容
-                presence_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容
+                max_tokens=512,  # 回复最大的字符数
+                top_p=0.9,
+                frequency_penalty=0,
+                presence_penalty=0,
+                stop=['<|im_end|>']
             )
             # logger.info("[ChatGPT] reply={}, total_tokens={}".format(response.choices[0]['message']['content'], response["usage"]["total_tokens"]))
             return {"total_tokens": response["usage"]["total_tokens"], 
                     "completion_tokens": response["usage"]["completion_tokens"], 
-                    "content": response.choices[0]['message']['content']}
+                    "content": response.choices[0]['text']}
         except openai.error.RateLimitError as e:
             # rate limit exception
             logger.warn(e)
@@ -122,16 +127,23 @@ class ChatGPTBot(Bot):
             logger.exception(e)
             return None
 
+def create_prompt(messages):
+    prompt = ""
+    for message in messages:
+        prompt += f"\n<|im_start|>{message['sender']}\n{message['text']}\n<|im_end|>"
+    prompt += "\n<|im_start|>assistant\n"
+    return prompt
+
 class Session(object):
     @staticmethod
     def build_session_query(query, session_id):
         '''
         build query with conversation history
         e.g.  [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Who won the world series in 2020?"},
-            {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
-            {"role": "user", "content": "Where was it played?"}
+            {"sender": "system", "text": "You are a helpful assistant."},
+            {"sender": "user", "text": "Who won the world series in 2020?"},
+            {"sender": "assistant", "text": "The Los Angeles Dodgers won the World Series in 2020."},
+            {"sender": "user", "text": "Where was it played?"}
         ]
         :param query: query content
         :param session_id: session id
@@ -140,17 +152,16 @@ class Session(object):
         session = all_sessions.get(session_id, [])
         if len(session) == 0:
             system_prompt = conf().get("character_desc", "")
-            system_item = {'role': 'system', 'content': system_prompt}
+            system_item = {'sender': 'system', 'text': system_prompt}
             session.append(system_item)
-
             all_sessions[session_id] = session
             logger.info("[OPEN_AI] session real lenth {}, query {}, session user id {}".format(len(session), query, session_id))
         if "***" in query:
-            system_item = {'role': 'system', 'content': query}
+            system_item = {'sender': 'system', 'text': query}
             session.append(system_item)
             # logger.info("[OPEN_AI] session lenth {}, append item={}".format(len(session),system_item))
         else:
-            user_item = {'role': 'user', 'content': query}
+            user_item = {'sender': 'user', 'text': query}
             session.append(user_item)
             # logger.info("[OPEN_AI] session lenth {}, append item={}".format(len(session),user_item))
 
@@ -167,7 +178,7 @@ class Session(object):
         session = all_sessions.get(session_id)
         if session:
             # append conversation
-            gpt_item = {'role': 'assistant', 'content': answer}
+            gpt_item = {'sender': 'assistant', 'text': answer}
             session.append(gpt_item)
 
         # discard exceed limit conversation
