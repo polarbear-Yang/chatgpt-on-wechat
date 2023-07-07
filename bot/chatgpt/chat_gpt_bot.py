@@ -166,27 +166,18 @@ class AzureChatGPTBot(ChatGPTBot):
     def __init__(self):
         super().__init__()
         openai.api_type = "azure"
-        openai.api_version = "2023-03-15-preview"
+        openai.api_version = "2023-06-01-preview"
         self.args["deployment_id"] = conf().get("azure_deployment_id")
 
-    def create_img(self, query, retry_count=0, api_key=None):
-        api_version = "2022-08-03-preview"
-        url = "{}dalle/text-to-image?api-version={}".format(openai.api_base, api_version)
-        api_key = api_key or openai.api_key
-        headers = {"api-key": api_key, "Content-Type": "application/json"}
+    def create_img(self, query, retry_count=0):
+        # Create an image using the image generation API
         try:
-            body = {"caption": query, "resolution": conf().get("image_create_size", "256x256")}
-            submission = requests.post(url, headers=headers, json=body)
-            operation_location = submission.headers["Operation-Location"]
-            retry_after = submission.headers["Retry-after"]
-            status = ""
-            image_url = ""
-            while status != "Succeeded":
-                logger.info("waiting for image create..., " + status + ",retry after " + retry_after + " seconds")
-                time.sleep(int(retry_after))
-                response = requests.get(operation_location, headers=headers)
-                status = response.json()["status"]
-            image_url = response.json()["result"]["contentUrl"]
+            generation_response = openai.Image.create(
+            prompt=query,
+            size='512x512',
+            n=1
+            )
+            image_url = generation_response["data"][0]["url"]  # extract image URL from response
             return True, image_url
         except Exception as e:
             logger.error("create image error: {}".format(e))

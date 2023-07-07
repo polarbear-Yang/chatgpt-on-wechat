@@ -46,6 +46,7 @@ class WechatComAppChannel(ChatChannel):
         # start message listener
         urls = ("/wxcomapp", "channel.wechatcom.wechatcomapp_channel.Query")
         app = web.application(urls, globals(), autoreload=False)
+        web.config.debug = False  # Disable debug mode
         port = conf().get("wechatcomapp_port", 9898)
         web.httpserver.runsimple(app.wsgifunc(), ("0.0.0.0", port))
 
