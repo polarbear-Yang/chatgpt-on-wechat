@@ -252,3 +252,9 @@ FAQs： <https://github.com/zhayujie/chatgpt-on-wechat/wiki/FAQs>
 如果你想了解更多项目细节，与开发者们交流更多关于AI技术的实践，欢迎加入星球:
 
 <a href="https://public.zsxq.com/groups/88885848842852.html"><img width="360" src="./docs/images/planet.jpg"></a>
+
+
+sudo iptables -A INPUT -p tcp --dport 9898 -j ACCEPT
+sudo firewall-cmd --zone=public --add-port=9898/tcp --permanent
+sudo firewall-cmd --reload
+curl http://127.0.0.1:9898/wxcomapp

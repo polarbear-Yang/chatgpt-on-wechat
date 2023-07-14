@@ -1,0 +1,692 @@
+nohup: ignoring input
+[INFO][2023-07-14 19:32:47][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': True, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 19:32:47][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:32:47][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:32:47][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 19:32:47][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 19:32:47][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 19:32:48][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 19:32:48][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 19:32:48][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为0983。
+[INFO][2023-07-14 19:32:48][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 19:32:48][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 19:32:48][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 19:32:48][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:32:48][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:32:48][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:32:48][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 19:32:48][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:32:48][victorinox.py:86] - use_tools=['url-get', 'terminal', 'meteo-weather', 'python'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 19:32:48][tool.py:32] - [tool] inited
+[INFO][2023-07-14 19:32:48][role.py:69] - [Role] inited
+[INFO][2023-07-14 19:32:48][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 19:32:48][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 19:32:48][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 19:34:57][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:35:06][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:41:09][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:41:12][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:41:23][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:46:35][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 19:46:35][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+20.108.185.233:42388 - - [14/Jul/2023 19:34:57] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+20.108.185.233:52522 - - [14/Jul/2023 19:35:06] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:19628 - - [14/Jul/2023 19:41:09] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+167.220.255.13:19628 - - [14/Jul/2023 19:41:09] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:19628 - - [14/Jul/2023 19:41:12] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+167.220.255.13:19628 - - [14/Jul/2023 19:41:16] "HTTP/1.1 GET /" - 404 Not Found
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:19628 - - [14/Jul/2023 19:41:23] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+127.0.0.1:41110 - - [14/Jul/2023 19:43:47] "HTTP/1.1 GET /" - 404 Not Found
+127.0.0.1:41110 - - [14/Jul/2023 19:43:47] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+nohup: ignoring input
+[INFO][2023-07-14 19:46:44][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': True, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 19:46:44][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:46:44][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:46:44][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 19:46:44][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 19:46:44][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 19:46:45][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 19:46:45][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 19:46:45][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为8651。
+[INFO][2023-07-14 19:46:45][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 19:46:45][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 19:46:45][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 19:46:45][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:46:45][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:46:45][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:46:45][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 19:46:45][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:46:45][victorinox.py:86] - use_tools=['python', 'meteo-weather', 'terminal', 'url-get'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 19:46:45][tool.py:32] - [tool] inited
+[INFO][2023-07-14 19:46:45][role.py:69] - [Role] inited
+[INFO][2023-07-14 19:46:45][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 19:46:45][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 19:46:45][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 19:47:48][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:48:02][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 19:55:02][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 19:55:02][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:57449 - - [14/Jul/2023 19:47:48] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:3490 - - [14/Jul/2023 19:48:02] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+207.46.13.229:9865 - - [14/Jul/2023 19:50:41] "HTTP/1.1 GET /robots.txt" - 404 Not Found
+207.46.13.210:7873 - - [14/Jul/2023 19:50:51] "HTTP/1.1 GET /" - 404 Not Found
+207.46.13.210:7879 - - [14/Jul/2023 19:51:11] "HTTP/1.1 GET /" - 404 Not Found
+20.26.44.166:41856 - - [14/Jul/2023 19:51:16] "HTTP/1.1 GET /" - 404 Not Found
+nohup: ignoring input
+[INFO][2023-07-14 19:55:07][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 19:55:07][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:55:07][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:55:07][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 19:55:07][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 19:55:07][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 19:55:07][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为8476。
+[INFO][2023-07-14 19:55:07][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 19:55:07][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 19:55:07][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 19:55:07][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:55:07][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:55:07][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:55:07][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 19:55:07][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:55:07][victorinox.py:86] - use_tools=['python', 'url-get', 'terminal', 'meteo-weather'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 19:55:07][tool.py:32] - [tool] inited
+[INFO][2023-07-14 19:55:07][role.py:69] - [Role] inited
+[INFO][2023-07-14 19:55:07][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 19:55:07][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 19:55:07][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 19:57:27][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 19:57:27][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+nohup: ignoring input
+[INFO][2023-07-14 19:57:29][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 19:57:29][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed None 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:57:29][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: None, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 19:57:29][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 19:57:29][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 19:57:29][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 19:57:30][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 19:57:30][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 19:57:30][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为2701。
+[INFO][2023-07-14 19:57:30][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 19:57:30][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 19:57:30][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 19:57:30][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:57:30][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 19:57:30][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:57:30][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 19:57:30][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 19:57:30][victorinox.py:86] - use_tools=['meteo-weather', 'url-get', 'python', 'terminal'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 19:57:30][tool.py:32] - [tool] inited
+[INFO][2023-07-14 19:57:30][role.py:69] - [Role] inited
+[INFO][2023-07-14 19:57:30][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 19:57:30][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 19:57:30][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 19:58:39][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:01:15][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 20:01:15][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:29917 - - [14/Jul/2023 19:58:39] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+nohup: ignoring input
+[INFO][2023-07-14 20:01:17][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 20:01:17][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:01:17][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:01:17][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 20:01:17][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 20:01:17][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 20:01:17][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为0976。
+[INFO][2023-07-14 20:01:17][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 20:01:17][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 20:01:17][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 20:01:17][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:01:17][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:01:18][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:01:18][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 20:01:18][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:01:18][victorinox.py:86] - use_tools=['terminal', 'python', 'url-get', 'meteo-weather'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 20:01:18][tool.py:32] - [tool] inited
+[INFO][2023-07-14 20:01:18][role.py:69] - [Role] inited
+[INFO][2023-07-14 20:01:18][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 20:01:18][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 20:01:18][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 20:02:30][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:02:30][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:03:17][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 20:03:17][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:55932 - - [14/Jul/2023 20:02:30] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:55932 - - [14/Jul/2023 20:02:30] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+nohup: ignoring input
+[INFO][2023-07-14 20:03:33][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': '264QxoQRMOjyQs3Jlv', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'y9ferZxofTptJA2BxlimZhPBk2GaFRE6NKgULA2AcEJ'}
+[INFO][2023-07-14 20:03:33][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 264QxoQRMOjyQs3Jlv y9ferZxofTptJA2BxlimZhPBk2GaFRE6NKgULA2AcEJ
+[INFO][2023-07-14 20:03:33][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: 264QxoQRMOjyQs3Jlv, aes_key: y9ferZxofTptJA2BxlimZhPBk2GaFRE6NKgULA2AcEJ
+[INFO][2023-07-14 20:03:33][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 20:03:33][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 20:03:33][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 20:03:34][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 20:03:34][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 20:03:34][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为1379。
+[INFO][2023-07-14 20:03:34][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 20:03:34][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 20:03:34][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 20:03:34][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:03:34][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:03:34][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:03:34][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 20:03:34][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:03:34][victorinox.py:86] - use_tools=['meteo-weather', 'url-get', 'python', 'terminal'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 20:03:34][tool.py:32] - [tool] inited
+[INFO][2023-07-14 20:03:34][role.py:69] - [Role] inited
+[INFO][2023-07-14 20:03:34][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 20:03:34][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 20:03:34][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 20:05:50][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:11:12][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 20:11:12][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:51103 - - [14/Jul/2023 20:05:50] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+127.0.0.1:33196 - - [14/Jul/2023 20:09:36] "HTTP/1.1 GET /" - 404 Not Found
+127.0.0.1:56282 - - [14/Jul/2023 20:09:39] "HTTP/1.1 GET /" - 404 Not Found
+nohup: ignoring input
+[INFO][2023-07-14 20:12:59][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'ww44bc2b04a72c4bed', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 20:12:59][config.py:149] - [Config] User datas loaded.
+ww44bc2b04a72c4bed C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:12:59][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww44bc2b04a72c4bed, secret: C6Ba26oj1wyEkT_7u29eF_0Cijqpda2JfQM8_LbgkKU, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:12:59][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 20:12:59][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 20:12:59][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 20:13:00][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 20:13:00][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 20:13:00][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为7903。
+[INFO][2023-07-14 20:13:00][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 20:13:00][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 20:13:00][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 20:13:00][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:13:00][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:13:00][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:13:00][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 20:13:00][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:13:00][victorinox.py:86] - use_tools=['terminal', 'url-get', 'python', 'meteo-weather'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 20:13:00][tool.py:32] - [tool] inited
+[INFO][2023-07-14 20:13:00][role.py:69] - [Role] inited
+[INFO][2023-07-14 20:13:00][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 20:13:00][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 20:13:00][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 20:13:04][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:13:05][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:13:38][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:24:39][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:24:52][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:25:34][kaiqian-app.py:17] - signal 15 received, exiting...
+[INFO][2023-07-14 20:25:34][config.py:160] - [Config] User datas saved.
+/home/kaiqian/.local/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:42854 - - [14/Jul/2023 20:13:04] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+167.220.255.13:42854 - - [14/Jul/2023 20:13:05] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+20.108.185.233:47708 - - [14/Jul/2023 20:13:38] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+20.108.185.233:46084 - - [14/Jul/2023 20:24:39] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 104, in __getattr__
+    return self[key]
+KeyError: 'msg_signature'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 280, in process
+    return self.handle()
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 271, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 517, in _delegate
+    return handle_class(cls)
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/application.py", line 495, in handle_class
+    return tocall(*args)
+  File "/home/kaiqian/chatgpt-on-wechat-comp/channel/wechatcom/wechatcomapp_channel.py", line 136, in GET
+    signature = params.msg_signature
+  File "/home/kaiqian/.local/lib/python3.8/site-packages/web/utils.py", line 106, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'msg_signature'
+
+20.108.185.233:54448 - - [14/Jul/2023 20:24:52] "HTTP/1.1 GET /wxcomapp" - 500 Internal Server Error
+nohup: ignoring input
+[INFO][2023-07-14 20:28:43][config.py:201] - [INIT] load config: {'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['@bot'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatcom_app', 'wechatcom_corp_id': 'wwe2bbaee20856011a', 'wechatcomapp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'G5ZU0_MY8ZC_Z6hjBzgJNav6v2Bt--QowRkU2sVaJSk', 'wechatcomapp_agent_id': '1000002', 'wechatcomapp_aes_key': 'T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI'}
+[INFO][2023-07-14 20:28:43][config.py:149] - [Config] User datas loaded.
+wwe2bbaee20856011a G5ZU0_MY8ZC_Z6hjBzgJNav6v2Bt--QowRkU2sVaJSk 1000002 F0REDVYOEKpjqYPVMbkP6 T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:28:43][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: wwe2bbaee20856011a, secret: G5ZU0_MY8ZC_Z6hjBzgJNav6v2Bt--QowRkU2sVaJSk, agent_id: 1000002, token: F0REDVYOEKpjqYPVMbkP6, aes_key: T14J7PMBU0lFMU5u9S3aKPBXMxmsmSysgjUW5HntDeI
+[INFO][2023-07-14 20:28:43][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-14 20:28:43][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-14 20:28:43][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2023-07-14 20:28:43][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为4279。
+[INFO][2023-07-14 20:28:43][godcmd.py:208] - [Godcmd] inited
+[INFO][2023-07-14 20:28:43][keyword.py:40] - [keyword] {}
+[INFO][2023-07-14 20:28:43][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-14 20:28:43][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:28:43][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-14 20:28:43][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:28:43][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-14 20:28:43][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-14 20:28:43][victorinox.py:86] - use_tools=['meteo-weather', 'terminal', 'python', 'url-get'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-14 20:28:43][tool.py:32] - [tool] inited
+[INFO][2023-07-14 20:28:43][role.py:69] - [Role] inited
+[INFO][2023-07-14 20:28:43][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-14 20:28:43][hello.py:23] - [Hello] inited
+[INFO][2023-07-14 20:28:43][finish.py:23] - [Finish] inited
+http://0.0.0.0:9898/
+[INFO][2023-07-14 20:29:07][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:30:03][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:30:20][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:30:34][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:30:37][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
+[INFO][2023-07-14 20:31:31][wechatcomapp_channel.py:134] - [wechatcom] receive params: <Storage {}>
