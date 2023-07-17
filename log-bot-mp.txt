@@ -1,0 +1,36 @@
+nohup: ignoring input
+python3: can't open file 'kaiqian-app.py': [Errno 2] No such file or directory
+nohup: ignoring input
+[DEBUG][2023-07-12 15:44:49][config.py:199] - [INIT] set log level to DEBUG
+[INFO][2023-07-12 15:44:49][config.py:201] - [INIT] load config: {'debug': True, 'use_azure_chatgpt': True, 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'azure_deployment_id': 'bearCave', 'open_ai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'model': 'gpt-3.5-turbo', 'proxy': '', 'hot_reload': True, 'group_chat_prefix': ['@bot', 'bearCave'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['机器熊熊洞'], 'image_create_prefix': ['画'], 'speech_recognition': True, 'group_speech_recognition': True, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT,  你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话解决您的问题。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'channel_type': 'wechatmp', 'wechatmp_token': 'F0REDVYOEKpjqYPVMbkP6', 'wechatmp_port': 8080, 'wechatmp_app_id': 'wx6f5b4ec5264d46fc', 'wechatmp_app_secret': 'f00b95cbf03410333c15c7900fb4c80c', 'wechatmp_aes_key': '9XG7gnVKh1ZaGCRLgP01yLd6dLYTfJTjEzRvwNxBZT3', 'single_chat_prefix': [''], 'single_chat_reply_prefix': '', 'plugin_trigger_prefix': '&'}
+[INFO][2023-07-12 15:44:49][config.py:149] - [Config] User datas loaded.
+[INFO][2023-07-12 15:44:49][plugin_manager.py:50] - Loading plugins config...
+[INFO][2023-07-12 15:44:49][plugin_manager.py:66] - Scaning plugins ...
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+chatgpt-tool-hub version: 0.4.4
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2023-07-12 15:44:49][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[DEBUG][2023-07-12 15:44:49][plugin_manager.py:153] - plugins.json config={'plugins': SortedDict({'Godcmd': {'enabled': True, 'priority': 999}, 'Keyword': {'enabled': True, 'priority': 900}, 'Banwords': {'enabled': False, 'priority': 100}, 'tool': {'enabled': True, 'priority': 0}, 'Role': {'enabled': True, 'priority': 0}, 'Dungeon': {'enabled': True, 'priority': 0}, 'BDunit': {'enabled': False, 'priority': 0}, 'Hello': {'enabled': True, 'priority': -1}, 'Finish': {'enabled': True, 'priority': -999}}, sort_func=<lambda>, reverse=True)}
+[INFO][2023-07-12 15:44:49][godcmd.py:193] - [Godcmd] 因未设置口令，本次的临时口令为9837。
+[INFO][2023-07-12 15:44:49][godcmd.py:208] - [Godcmd] inited
+[DEBUG][2023-07-12 15:44:49][keyword.py:34] - [keyword]加载配置文件/home/kaiqian/chatgpt-on-wechat-mp/plugins/keyword/config.json
+[INFO][2023-07-12 15:44:49][keyword.py:40] - [keyword] {}
+[INFO][2023-07-12 15:44:49][keyword.py:42] - [keyword] inited.
+[INFO][2023-07-12 15:44:49][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-12 15:44:49][__init__.py:29] - [visual_dl] init failed, error_info: ModuleNotFoundError("No module named 'torch'")
+[INFO][2023-07-12 15:44:49][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-12 15:44:49][chatgpt.py:188] - success use customized api base url: https://polarbear-ai.openai.azure.com/
+[INFO][2023-07-12 15:44:49][chatgpt.py:183] - proxy no find, directly request to chatgpt instead
+[INFO][2023-07-12 15:44:49][victorinox.py:86] - use_tools=['url-get', 'python', 'meteo-weather', 'terminal'], params: {'debug': False, 'openai_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'open_ai_api_base': 'https://polarbear-ai.openai.azure.com/', 'proxy': '', 'request_timeout': 120, 'model_name': 'gpt-3.5-turbo', 'no_default': False, 'top_k_results': 3, 'news_api_key': '', 'bing_subscription_key': '', 'google_api_key': '', 'google_cse_id': '', 'searx_search_host': '', 'wolfram_alpha_appid': '', 'morning_news_api_key': '', 'cuda_device': 'cpu', 'think_depth': 3, 'arxiv_summary': True, 'morning_news_use_llm': False, 'llm_api_key': '479f6b74d09a4661983a6dc9383d73fa', 'llm_api_base_url': 'https://polarbear-ai.openai.azure.com/'}
+[INFO][2023-07-12 15:44:49][tool.py:32] - [tool] inited
+[DEBUG][2023-07-12 15:44:49][role.py:62] - [Role] no role found for tag comments 
+[INFO][2023-07-12 15:44:49][role.py:69] - [Role] inited
+[INFO][2023-07-12 15:44:49][dungeon.py:56] - [Dungeon] inited
+[INFO][2023-07-12 15:44:49][hello.py:23] - [Hello] inited
+[INFO][2023-07-12 15:44:49][finish.py:23] - [Finish] inited
